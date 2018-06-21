@@ -10,6 +10,11 @@ import org.apache.log4j.Logger;
 
 import com.eric.ph.geolocationconverter.model.ZoneInfo;
 
+/**
+ * Acts as the storage for the zone data
+ * 
+ * @author davidericjohn
+ */
 public class ZoneInfoStore {
 
 	private static final Logger LOGGER = Logger.getLogger(ZoneInfoStore.class);
@@ -31,6 +36,9 @@ public class ZoneInfoStore {
 		this.loadData();
 	}
 
+	/**
+	 * Loads and store the zone data to the memory
+	 */
 	private void loadData() {
 		final BufferedReader br = new BufferedReader(
 				new InputStreamReader(ZoneInfoStore.class.getResourceAsStream(DATA_FILE_NAME)));
